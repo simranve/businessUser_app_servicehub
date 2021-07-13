@@ -56,7 +56,7 @@ export const fetchReportListAction = (message = '') => {
     dispatch(startReportAction());
     const authCode = "Bearer " + localStorage.getItem("token");
     axios
-      .get("/professionalApp/get-businesses-report", {
+      .get("/businessUserAdmin/get-businesses-report", {
         headers: { Authorization: authCode }
       })
       .then(response => {
@@ -80,7 +80,7 @@ export const fetchReportProfessionalListAction = (id) => {
     dispatch(startProfessionalReportAction());
     const authCode = "Bearer " + localStorage.getItem("token");
     axios
-      .get("/professionalApp/get-professional-report/"+id, {
+      .get("/businessUserAdmin/get-professional-report/"+id, {
         headers: { Authorization: authCode }
       })
       .then(response => {
@@ -105,7 +105,7 @@ export const fetchReportCustomerListAction = (id) => {
     dispatch(startCustomerReportAction());
     const authCode = "Bearer " + localStorage.getItem("token");
     axios
-      .get("/professionalApp/get-customer-report/"+id, {
+      .get("/businessUserAdmin/get-customer-report/"+id, {
         headers: { Authorization: authCode }
       })
       .then(response => {

@@ -155,7 +155,7 @@ export const getbusinessOnId = (data) => {
       });
   };
 };
-export const editBusiness = (business_id,data,history) => {
+export const editBusiness = (business_id,data) => {
   return dispatch => {
     dispatch(startbussinessAction());
     const authCode = "Bearer " + localStorage.getItem("token");
@@ -166,8 +166,7 @@ export const editBusiness = (business_id,data,history) => {
       .then(response => {
         if (response.status === 200) {
           if (response.data.status === 200) {
-            // dispatch(fetchbussinessListAction(response.data.message))
-            history.push('./../business')  
+            // dispatch(fetchbussinessListAction(response.data.message))  
             // dispatch(fetchprofessionalListSUCCESS(response.data.data,"Professional deleted sucessfully"));
           } else {
             dispatch(bussinessActionFail(response.data.message));

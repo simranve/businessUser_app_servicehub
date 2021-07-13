@@ -29,44 +29,38 @@ class Sidebar extends Component  {
         <div className='navbar-inner'>
           <div className='collapse navbar-collapse' id='sidenav-collapse-main'>
             <ul className='navbar-nav'>
-              {/* {data.delivery === true?
-                <li className='nav-item'>
+              <li className='nav-item'>
                 <Link className='nav-link active' to='/delivery'>
                   <i className='ni ni-app text-primary' />
-                  <span className='nav-link-text'>Delivery</span>
+                  <span className='nav-link-text'>Delivery and Ride Share</span>
                 </Link>
-              </li>:''  
-            }
-              {data.rideshare === true?
-              <li className='nav-item'>
+              </li>
+              {/* <li className='nav-item'>
                 <Link className='nav-link' to='/rideShare'>
                   <i className='ni ni-hat-3 text-primary' />
                   <span className='nav-link-text'>Ride share</span>
                 </Link>
-              </li>:''}
-              {data.schedule === true?
+              </li> */}
               <li className='nav-item'>
                 <Link className='nav-link' to='/schedule'>
                   <i className='ni ni-briefcase-24 text-primary' />
                   <span className='nav-link-text'>Schedule</span>
                 </Link>
-              </li>:''}
-              {data.report === true?
+              </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/ReportCustomer'>
+                <Link className='nav-link' to='/reportsprofessional'>
                   <i className='ni ni-archive-2 text-primary' />
                   <span className='nav-link-text'>Report</span>
                 </Link>
-              </li>:''}
-              {data.happy_hour_discount === true?
+              </li>
+              
               <li className='nav-item'>
                 <Link className='nav-link' to='/happyHourDiscount'>
                   <i className='ni ni-tv-2 text-primary' />
                   <span className='nav-link-text'>Happy hour discount</span>
                 </Link>
-              </li>:''}
-              */}
-              
+              </li>
+
               <li className='nav-item'>
                 <Link className='nav-link' to='/items'>
                   <i className='ni ni-single-02 text-primary' />

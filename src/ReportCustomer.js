@@ -20,7 +20,7 @@ class ReportCustomer extends React.Component {
     }
   }
   componentDidMount = async () => {
-    let professional_id = await localStorage.getItem('userId');
+    let professional_id = await this.props.match.params.id;
     if (professional_id) {
       await this.setState({
         professional_id: professional_id,

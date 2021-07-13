@@ -35,7 +35,7 @@ export const fetchprofessionalListAction = (message) => {
     dispatch(startprofessionalAction());
     const authCode = "Bearer " + localStorage.getItem("token");
     axios
-      .get("/businessUserAdmin/get-professionals", {
+      .get("/businessUserAdmin/get-professionals/"+localStorage.getItem('userId'), {
         headers: { Authorization: authCode }
       })
       .then(response => {
@@ -159,7 +159,7 @@ export const fetchprofessionalAction = (data) => {
       });
   };
 };
-export const editProfessional = (data,history,professional_id) => {
+export const editProfessional = (data,professional_id) => {
   return dispatch => {
     dispatch(startprofessionalAction());
     const authCode = "Bearer " + localStorage.getItem("token");
@@ -171,7 +171,7 @@ export const editProfessional = (data,history,professional_id) => {
         if (response.status === 200) {
           if (response.data.status === 200) {
             // dispatch(fetchprofessionalListAction(response.data.message))
-            history.push('./../professionals')
+            // history.push('./../professionals')
             // dispatch(fetchprofessionalListSUCCESS(response.data.data,"Professional deleted sucessfully"));
             // var redirect = <Redirect from="/addprofessionals" to= "./professionals"/>
           } else {
