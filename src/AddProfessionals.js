@@ -290,10 +290,19 @@ class AddProfessionals extends React.Component {
           this.state.formFields[index].id = index
           this.state.formFields[index].slot_opening_time = this.state.formFields[index].slot_open_hour+":" +this.state.formFields[index].slot_open_min+" " +this.state.formFields[index].slot_hours_min
           if(this.state.formFields[index].hours_min === "Hours"){
-            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60
+            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60 *60
           }
           else if(this.state.formFields[index].hours_min === "days"){
-            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60 *24
+            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60 *24 *60
+          }
+          
+          else if(this.state.formFields[index].hours_min === "Minutes"){
+            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60
+          }
+          else{
+            this.state.formFields[index].slot_time_in_minutes = parseInt(this.state.formFields[index].time) * 60 *60
+
+            this.state.formFields[index].hours_min = "Hours"
           }
           console.log(this.state.formFields)
         }
