@@ -8,6 +8,7 @@ import {
 } from 'reactstrap'
 import { withRouter } from "react-router-dom";
 import worldMapData from 'city-state-country'
+import { Redirect } from "react-router-dom";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -239,7 +240,12 @@ class Dashboard extends React.Component {
   }
   
   render() {
-
+    const userToken = localStorage.getItem('token')
+    // console.log(userToken)
+    let authRedirect = null
+    if (!userToken) { 
+      authRedirect = <Redirect from="./Dashboard" to= "/"/>
+    }
     let business_id = this.props.match.params.id;
     let getData = this.props.data_bussiness;
     if (

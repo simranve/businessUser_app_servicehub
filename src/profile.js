@@ -314,7 +314,7 @@ class Profile extends React.Component  {
       data.append('business_owner_name', this.state.business_owner_name);
       data.append('email', this.state.email);
       data.append('country', this.state.country);
-      data.append('password', 'pass@123');
+      // data.append('password', 'pass@123');
       data.append(
         'capabilities',
         JSON.stringify({
