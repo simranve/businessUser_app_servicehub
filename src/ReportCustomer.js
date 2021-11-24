@@ -121,11 +121,11 @@ class ReportCustomer extends React.Component {
                 sort: "asc",
               },
               
-              {
-                label: "Total Service",
-                field: "total_service_charge",
-                sort: "asc",
-              },
+              // {
+              //   label: "Total Service",
+              //   field: "total_service_charge",
+              //   sort: "asc",
+              // },
               
               {
                 label: "Promo code discount",
@@ -166,11 +166,11 @@ class ReportCustomer extends React.Component {
                 sort: "asc",
               },
               
-              {
-                label: "Action",
-                field: "action",
-                sort: "asc",
-              },
+              // {
+              //   label: "Action",
+              //   field: "action",
+              //   sort: "asc",
+              // },
           ],
           rows: orderList,
         };

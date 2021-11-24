@@ -71,6 +71,7 @@ class ReportsProfessional extends React.Component {
               extra_product_count: datas.extra_product_count,
               extra_service_count: datas.extra_service_count,
               overall:datas.total_service_charge+datas.item_total,
+              bussiness_owner_money:datas.bussiness_owner_money,
               action:
               <div>
                 <NavLink className='btn btn-icon btn-default' 
@@ -167,29 +168,33 @@ class ReportsProfessional extends React.Component {
               field: "servicehubConnetFees",
               sort: "asc",
             },
+            {
+              label: "total business owner money",
+              field: "bussiness_owner_money",
+              sort: "asc",
+            },
+            // {
+            //   label: "total service fees",
+            //   field: "total_service_fees",
+            //   sort: "asc",
+            // },
             
-            {
-              label: "total service fees",
-              field: "total_service_fees",
-              sort: "asc",
-            },
+            // {
+            //   label: "total processing fees",
+            //   field: "total_processing_fees",
+            //   sort: "asc",
+            // },
             
-            {
-              label: "total processing fees",
-              field: "total_processing_fees",
-              sort: "asc",
-            },
-            
-            {
-              label: "total cancellation charge",
-              field: "total_cancellation_fees",
-              sort: "asc",
-            },
-            {
-              label: "service charge",
-              field: "total_service_charge",
-              sort: "asc",
-            },
+            // {
+            //   label: "total cancellation charge",
+            //   field: "total_cancellation_fees",
+            //   sort: "asc",
+            // },
+            // {
+            //   label: "service charge",
+            //   field: "total_service_charge",
+            //   sort: "asc",
+            // },
             {
               label: "Action",
               field: "action",

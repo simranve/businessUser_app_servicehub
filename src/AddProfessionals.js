@@ -248,9 +248,21 @@ class AddProfessionals extends React.Component {
       return;
     }
     if (selected) {
-      var results = this.state.workingDay.filter(function (entry) {
-        return entry.getTime() != day.getTime();
-      });
+      // var results = this.state.workingDay.filter(function (entry) {
+      //   return entry.getTime() != day.getTime();
+      // });
+      // this.setState({ workingDay: results });
+      // return;
+      
+      var results = []
+      for (let index = 0; index < this.state.workingDay.length; index++) {
+        let entry = this.state.workingDay[index];
+        if(entry.getDate() != day.getDate() || entry.getMonth() != day.getMonth() || entry.getYear() != day.getYear()){
+          results.push(entry)
+        }
+        console.log(this.state.workingDay.length)
+        console.log(results)
+      }
       this.setState({ workingDay: results });
       return;
     }
